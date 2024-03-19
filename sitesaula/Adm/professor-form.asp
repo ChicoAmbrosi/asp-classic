@@ -25,7 +25,7 @@ end if
 
 <div class="container">
 <br><br>
-  <form class="form-horizontal" action="acao.asp" method="post">
+  <form class="form-horizontal" action="professor-acao.asp" method="post">
 
     <div class="form-group">
       <label class="control-label col-sm-2" for="nome"><b>Nome:</b></label>

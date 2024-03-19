@@ -20,8 +20,8 @@ if botao = "Incluir" then
     conexao.execute(sql)
 %>
     <script>
-        alert("Dados incluído com sucesso!")
-        parent.location = "list.asp"
+        //alert("Dados incluído com sucesso!")
+        parent.location = "professor-list.asp"
     </script>
 <%
 elseif botao = "Alterar" then
@@ -36,8 +36,8 @@ elseif botao = "Alterar" then
     conexao.execute(sql)
 %>
     <script>
-        alert("Dados alterado com sucesso!")
-        parent.location = "list.asp"
+        //alert("Dados alterado com sucesso!")
+        parent.location = "professor-list.asp"
     </script>
 <%
 elseif opc <> "" then
@@ -49,8 +49,8 @@ elseif opc <> "" then
     conexao.execute(sql)
 %>
     <script>
-        alert("Linha excluída com sucesso!")
-        parent.location = "list.asp"
+        //alert("Linha excluída com sucesso!")
+        parent.location = "professor-list.asp"
     </script>
 <%
 end if

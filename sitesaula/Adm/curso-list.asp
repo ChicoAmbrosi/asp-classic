@@ -2,7 +2,7 @@
 <!--#include virtual="adm/wpg_cnx.asp"-->  
 <%
 
-sql = "select * from professor order by nome "
+sql = "select * from curso order by nome "
 set rs = conexao.execute(sql)
 
 %>
@@ -11,7 +11,7 @@ function Excluir(cod)
    {
 	 if(confirm("Confirma exclusão?"))
 	  {
-	    parent.location = "acao.asp?opc=exc&cod=" + cod ;
+	    parent.location = "curso-acao.asp?opc=exc&cod=" + cod ;
       }
    
    } 
@@ -19,17 +19,16 @@ function Excluir(cod)
  </script>
 
 <div class="container">
-<form action="form.asp" method=post>
+<form action="curso-form.asp" method=post>
 <button type="submit" class="btn btn-primary">Adicionar</button>
 
-  <h4>Professor</h4>
+  <h4>Curso</h4>
   <div class="table-responsive">          
   <table class="table">
     <thead>
       <tr>
         <th>#</th>
         <th>Nome</th>
-        <th>Matéria</th>
         <th>#</th>		
       </tr>
     </thead>
@@ -39,15 +38,14 @@ function Excluir(cod)
 do while not rs.eof%>
       <tr>
         <td>
- <a href="form.asp?evt=alt&cod=<%=rs("id")%>">
-<img src="../imagens/editar.png">
+ <a href="curso-form.asp?evt=alt&cod=<%=rs("id")%>">
+<img src="imagens/editar.png">
         </a>		
 		</td>
         <td><%=rs("nome")%></td>
-        <td><%=rs("materia")%></td>
         <td>
  <a href="javascript:Excluir(<%=rs("id")%>)">
- <img src="../imagens/excluir.png">
+ <img src="imagens/excluir.png">
         </a>		
 		</td>
 

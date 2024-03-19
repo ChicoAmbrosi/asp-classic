@@ -1,4 +1,7 @@
 <%
+if trim(session("usuario_id")) = "" then
+  response.redirect("index.asp?id=-1")
+end if
 Response.ContentType = "text/html"
 Response.AddHeader "Content-Type", "text/html;charset=UTF-8"
 Response.CodePage = 65001 'para uso no access db mdb - salvar em utf-8
@@ -26,18 +29,17 @@ Response.CharSet = "UTF-8"
   <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="inicio.asp">Home <span class="sr-only">(p�gina atual)</span></a>
+        <a class="nav-link" href="inicio.asp">Home <span class="sr-only">(página atual)</span></a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Cadastros
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="../professor/list.asp">Professor</a>
-          <a class="dropdown-item" href="../curso/list.asp">Curso</a>
-          <a class="dropdown-item" href="../modulo/list.asp">Módulo</a>          
+          <a class="dropdown-item" href="professor-list.asp">Professor</a>
+          <a class="dropdown-item" href="curso-list.asp">Curso</a>
+          <a class="dropdown-item" href="contato-list.asp">Contato</a>
           <a class="dropdown-item" href="upload.asp">Upload Exemplo</a>                    
-          <a class="dropdown-item" href="cst_modulo_up.asp">Módulo Upload</a>                    
 
         </div>
       </li>

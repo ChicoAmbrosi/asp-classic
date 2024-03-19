@@ -2,7 +2,7 @@
 <!--#include file="wpg_cnx.asp"-->  
 <br><br>
 <div class="alert alert-primary" role="alert">
-  Olá Alisson, <br>seja bem-vindo ao Curso de Desenvolvimento Web
+  Olá <%=session("usuario_nome")%>, <br>seja bem-vindo a área Administrativa
 </div>
 
 <br><br>
